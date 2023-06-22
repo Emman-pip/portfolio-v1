@@ -21,6 +21,10 @@ export function layout() {
   myName.textContent = "Emmanuel Parreño";
   nameContainer.appendChild(myName);
 
+  const socmedContainer = document.createElement("div");
+  socmedContainer.classList.add("socmedContainer");
+  topBar.appendChild(socmedContainer);
+
   const myNameDetails = document.createElement("div");
   myNameDetails.classList.add("vSmallText");
   myName.appendChild(myNameDetails);

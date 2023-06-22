@@ -11,9 +11,14 @@
   user-select: none;
 }
 body {
-  background: var(--main-color);
+  background: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--main-color),
+    var(--white-shade)
+  );
   /* background-color: white; */
-  height: 200vh;
+  height: 300vh;
 }
 
 .topBar {
@@ -23,14 +28,17 @@ body {
   mix-blend-mode: difference;
   top: 0rem;
   display: flex;
-  padding: 1rem;
   align-items: center;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nameContainer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .circle {
@@ -58,6 +66,24 @@ body {
 .vSmallText {
   font-family: Raj-light;
   font-size: 0.7rem;
+}
+@keyframes slide-from-right {
+  0% {
+    opacity: 0%;
+    right: 10vh;
+  }
+  100% {
+    opacity: 100%;
+    right: 10vw;
+  }
+}
+
+.socmedContainer {
+  mix-blend-mode: none;
+  /* background-color: var(--main-accent); */
+  height: 100%;
+  width: 30vw;
+  border-bottom-left-radius: 3rem;
 }
 
 .firstPart {
@@ -92,9 +118,11 @@ img {
 
 @keyframes slide-from-left {
   0% {
-    left: -30vh;
+    opacity: 0%;
+    left: -10vh;
   }
   100% {
+    opacity: 100%;
     left: 10vw;
   }
 }
@@ -113,7 +141,7 @@ img {
 }
 
 .intro {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.7rem;
   cursor: default;
   font-family: Raj-regular;
   font-size: 2rem;
@@ -139,6 +167,7 @@ img {
 }
 
 .aboutmeButton {
+  z-index: 0;
   cursor: pointer;
   font-family: Raj-light;
   font-size: 1rem;
@@ -159,15 +188,6 @@ img {
 }
 .aboutmeButton:active {
   background-color: var(--white-shade);
-}
-
-@keyframes slide-from-right {
-  0% {
-    right: -30vh;
-  }
-  100% {
-    right: 10vw;
-  }
 }
 
 .intro2 {
