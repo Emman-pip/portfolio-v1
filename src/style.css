@@ -1,3 +1,50 @@
 * {
-  color: red;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  --main-color: #000000;
+  --white-shade: white;
+  --main-accent: #00c9c8;
+  --light-accent: #bffcf9;
+  --dark-accent: #47817f;
+}
+body {
+  background: var(--main-color);
+  /* background-color: white; */
+  height: 200vh;
+}
+
+.topBar {
+  /* background-color: white; */
+  position: sticky;
+  height: 6rem;
+  display: flex;
+  mix-blend-mode: difference;
+  top: 0.5rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--light-accent);
+  border-radius: 100rem;
+}
+@font-face {
+  font-family: Dosis-Bold;
+  src: url("./fonts/Dosis-Bold.ttf");
+}
+.name {
+  font-family: Dosis-Bold;
+  font-size: 2rem;
+  color: var(--white-shade);
+  /* mix-blend-mode: difference; */
 }

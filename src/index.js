@@ -1,5 +1,4 @@
-import { lol } from "./dom.js";
 import "./style.css";
+import { layout } from "./dom.js";
 
-console.log("lolas");
-lol();
+layout();
