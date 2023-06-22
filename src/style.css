@@ -7,6 +7,8 @@
   --main-accent: #00c9c8;
   --light-accent: #bffcf9;
   --dark-accent: #47817f;
+  cursor: default;
+  user-select: none;
 }
 body {
   background: var(--main-color);
@@ -15,12 +17,11 @@ body {
 }
 
 .topBar {
-  /* background-color: white; */
   position: sticky;
   height: 6rem;
   display: flex;
   mix-blend-mode: difference;
-  top: 0.5rem;
+  top: 0rem;
   display: flex;
   padding: 1rem;
   align-items: center;
@@ -33,18 +34,148 @@ body {
 }
 
 .circle {
-  height: 2rem;
-  width: 2rem;
+  height: 0.7rem;
+  width: 0.7rem;
   background-color: var(--light-accent);
   border-radius: 100rem;
 }
 @font-face {
-  font-family: Dosis-Bold;
-  src: url("./fonts/Dosis-Bold.ttf");
+  font-family: Raj-bold;
+  src: url("./fonts/Rajdhani-Bold.ttf");
 }
 .name {
-  font-family: Dosis-Bold;
-  font-size: 2rem;
+  font-family: Raj-bold;
+  font-size: 1.5rem;
   color: var(--white-shade);
   /* mix-blend-mode: difference; */
+}
+
+@font-face {
+  font-family: Raj-light;
+  src: url("./fonts/Rajdhani-Light.ttf");
+}
+
+.vSmallText {
+  font-family: Raj-light;
+  font-size: 0.7rem;
+}
+
+.firstPart {
+  height: 120vh;
+  display: flex;
+}
+
+img {
+  width: 1600px;
+  height: auto;
+  mask: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.4), transparent);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: Raj-regular;
+  src: url("./fonts/Rajdhani-Regular.ttf");
+}
+
+@font-face {
+  font-family: Raj-medium;
+  src: url("./fonts/Rajdhani-Medium.ttf");
+}
+
+@keyframes slide-from-left {
+  0% {
+    left: -30vh;
+  }
+  100% {
+    left: 10vw;
+  }
+}
+
+.greet {
+  animation-name: slide-from-left;
+  animation-duration: 2s;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  font-family: Raj-medium;
+  font-size: 6rem;
+  color: var(--white-shade);
+  letter-spacing: 1rem;
+  height: fit-content;
+}
+
+.intro {
+  cursor: default;
+  font-family: Raj-regular;
+  font-size: 2rem;
+  /* border-bottom: 3px solid var(--dark-accent); */
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-accent);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.aboutmeButton {
+  cursor: pointer;
+  font-family: Raj-light;
+  font-size: 1rem;
+  animation-name: slide-from-left;
+  animation-duration: 2s;
+  color: var(--white-shade);
+  position: absolute;
+  top: 60vh;
+  left: 10vw;
+  border: 1px solid var(--white-shade);
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgba(36, 36, 36, 0);
+  backdrop-filter: blur(2rem);
+}
+.aboutmeButton:hover {
+  background-color: rgba(36, 36, 36, 0.815);
+}
+.aboutmeButton:active {
+  background-color: var(--white-shade);
+}
+
+@keyframes slide-from-right {
+  0% {
+    right: -30vh;
+  }
+  100% {
+    right: 10vw;
+  }
+}
+
+.intro2 {
+  position: absolute;
+  bottom: 30vh;
+  right: 10vw;
+  color: var(--white-shade);
+  font-family: Raj-light;
+  font-size: 1.5rem;
+  animation-name: slide-from-right;
+  animation-duration: 2s;
 }
