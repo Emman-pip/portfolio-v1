@@ -113,6 +113,7 @@ img {
 }
 
 .intro {
+  letter-spacing: 0.5rem;
   cursor: default;
   font-family: Raj-regular;
   font-size: 2rem;
