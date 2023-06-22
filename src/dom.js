@@ -1,5 +1,5 @@
 import Sea from "./pexels-sampreety-ali-695794.jpg";
-
+import Circuit from "./pexels-pixabay-50711.jpg";
 export function layout() {
   //body
   const body = document.querySelector("body");
@@ -31,7 +31,6 @@ export function layout() {
   myNameDetails.textContent = "BSIT STUDENT AT BATANGAS STATE UNIVERSITY";
 
   body.appendChild(topBar);
-  console.log("lol");
 
   //first prompt
   const firstPart = document.createElement("section");
@@ -46,25 +45,66 @@ export function layout() {
   const greeting = document.createElement("div");
   greeting.textContent = "HELLO,";
   greeting.classList.add("greet");
+  greeting.classList.add("right");
   firstPart.appendChild(greeting);
 
   const intro = document.createElement("div");
   intro.classList.add("intro");
   intro.classList.add("underline");
+  intro.classList.add("right");
   intro.textContent = "I am EMMANUEL";
   greeting.appendChild(intro);
 
-  const button = document.createElement("button");
+  const button = document.createElement("a");
+  button.href = "#aboutMeBackground";
   button.textContent = "ABOUT ME";
-  firstPart.appendChild(button);
   button.classList.add("aboutmeButton");
+  button.classList.add("right");
+  firstPart.appendChild(button);
 
   const intro2 = document.createElement("div");
   intro2.classList.add("intro2");
+  intro2.classList.add("left");
   intro2.textContent = "A self-taught programmer";
   firstPart.appendChild(intro2);
 
+  //page break
+
+  const pagebreak = document.createElement("div");
+  pagebreak.classList.add("pagebreak");
+
   //about me
+  const aboutMeBackground = document.createElement("div");
+  aboutMeBackground.classList.add("aboutMeBackground");
+  aboutMeBackground.id = "aboutMeBackground";
+  body.appendChild(aboutMeBackground);
+
+  const hundredVHcontainer = document.createElement("div");
+  hundredVHcontainer.classList.add("hundredVHcontainer");
+
+  aboutMeBackground.appendChild(hundredVHcontainer);
+
+  const aboutMeContainer = document.createElement("div");
+  aboutMeContainer.classList.add("aboutMeContainer");
+  aboutMeContainer.classList.add("appear");
+  hundredVHcontainer.appendChild(aboutMeContainer);
+
+  const AMTitle = document.createElement("div");
+  AMTitle.classList.add("AMTitle");
+  AMTitle.classList.add("appear");
+  AMTitle.textContent = "ABOUT ME";
+  aboutMeContainer.appendChild(AMTitle);
+
+  const aboutMeParag = document.createElement("p");
+  aboutMeParag.classList.add("aboutMeParag");
+  aboutMeParag.classList.add("appear");
+  aboutMeParag.innerHTML =
+    "I am a self-taught <span>web developer</span>. Currently, I am studying <span>BS in information technology at the Batangas State University</span>. I have been honing my skills since late 2022 (through the <span>Odin Project</span> and other online resources). <span>I am confident with my entry-level front-end development skills</span>. My primary languages are <span>HTML, CSS, and Javascript</span> - but I can also use Python, Webpack, CLI, and C++ to a certain extent.";
+  aboutMeContainer.appendChild(aboutMeParag);
 
   //projects
+
+  const works = document.createElement("div");
+  works.classList.add("works");
+  body.appendChild(works);
 }

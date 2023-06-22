@@ -10,6 +10,10 @@
   cursor: default;
   user-select: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(
     to bottom,
@@ -18,8 +22,26 @@ body {
     var(--white-shade)
   );
   /* background-color: white; */
-  height: 300vh;
+  min-height: 300vh;
+  overflow-x: hidden;
 }
+
+/* scroll bar */
+
+::-webkit-scrollbar-track {
+  width: 2vw;
+  background-color: var(--light-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* top bar */
 
 .topBar {
   position: sticky;
@@ -67,16 +89,6 @@ body {
   font-family: Raj-light;
   font-size: 0.7rem;
 }
-@keyframes slide-from-right {
-  0% {
-    opacity: 0%;
-    right: 10vh;
-  }
-  100% {
-    opacity: 100%;
-    right: 10vw;
-  }
-}
 
 .socmedContainer {
   mix-blend-mode: none;
@@ -116,20 +128,9 @@ img {
   src: url("./fonts/Rajdhani-Medium.ttf");
 }
 
-@keyframes slide-from-left {
-  0% {
-    opacity: 0%;
-    left: -10vh;
-  }
-  100% {
-    opacity: 100%;
-    left: 10vw;
-  }
-}
-
 .greet {
-  animation-name: slide-from-left;
-  animation-duration: 2s;
+  /* animation-name: slide-from-left;
+  animation-duration: 2s; */
   position: absolute;
   top: 30vh;
   left: 10vw;
@@ -148,6 +149,174 @@ img {
   /* border-bottom: 3px solid var(--dark-accent); */
 }
 
+.aboutmeButton {
+  z-index: 0;
+  cursor: pointer;
+  font-family: Raj-light;
+  font-size: 1rem;
+  /* animation-name: slide-from-left;
+  animation-duration: 2s; */
+  color: var(--white-shade);
+  position: absolute;
+  top: 60vh;
+  left: 10vw;
+  border: 1px solid var(--white-shade);
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgba(36, 36, 36, 0);
+  backdrop-filter: blur(2rem);
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+}
+.aboutmeButton:hover {
+  background-color: rgba(36, 36, 36, 0.815);
+}
+.aboutmeButton:active {
+  background-color: var(--white-shade);
+}
+
+.intro2 {
+  position: absolute;
+  bottom: 20vh;
+  right: 10vw;
+  color: var(--white-shade);
+  font-family: Raj-light;
+  font-size: 1.5rem;
+  /* animation-name: slide-from-right;
+  animation-duration: 2s; */
+}
+
+/* page break */
+
+.pagebreak {
+  z-index: 10;
+  height: 0.3rem;
+  background-color: var(--white-shade);
+  margin-left: 30vw;
+  margin-right: 30vw;
+  border-radius: 100rem;
+  opacity: 40%;
+}
+
+/* second part */
+
+.aboutMeBackground {
+  height: 120vh;
+  background: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--light-accent) /* var(--light-accent) */
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  scroll-behavior: smooth;
+  /* padding-top: 8rem; */
+}
+
+.hundredVHcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMeContainer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.864),
+      #0000008b,
+      rgba(0, 0, 0, 0.851)
+    ),
+    url("./pexels-djordje-petrovic-2102416.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(14, 9, 9, 0.215);
+  border: 0.5rem solid var(--white-shade);
+  transition: border 2s;
+  padding: 2rem;
+  height: fit-content;
+  clip-path: polygon(
+    10% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0% 90%,
+    0% 10%,
+    10% 0%
+  );
+  width: fit-content;
+  height: fit-content;
+  width: 80vw;
+}
+
+@keyframes widen {
+  0% {
+    width: 30vw;
+  }
+  100% {
+    width: 80vw;
+  }
+}
+
+.expand {
+  animation-name: widen;
+  animation-duration: 1.5s;
+}
+
+.aboutMeContainer:hover {
+  border: 0.5rem solid var(--main-accent);
+}
+
+.aboutMeContainer::after {
+  content: "I am not the one in the picture :)";
+  font-family: Raj-light;
+  color: white;
+  font-size: 0.8rem;
+  transition: font-size 0.5s;
+}
+
+.aboutMeContainer:hover::after {
+  font-size: 1rem;
+}
+
+.AMTitle {
+  /* animation-name: slide-from-right;
+    animation-duration: 2s; */
+  color: var(--white-shade);
+  font-family: Raj-bold;
+  font-size: 5rem;
+  transition: color 1s 10s;
+}
+
+.AMTitle:hover {
+  color: var(--main-accent);
+}
+
+.aboutMeParag {
+  width: 40vw;
+  font-family: Raj-light;
+  font-size: 1.5rem;
+  color: var(--white-shade);
+}
+
+span {
+  font-family: Raj-regular;
+  transition: color 1.5s;
+}
+
+span:hover {
+  color: var(--main-accent);
+  font-weight: 900;
+}
+
+/* ////////////////////extra/////////////////////////////// */
 .underline::after {
   content: "";
   position: absolute;
@@ -166,37 +335,58 @@ img {
   transform-origin: bottom left;
 }
 
-.aboutmeButton {
-  z-index: 0;
-  cursor: pointer;
-  font-family: Raj-light;
-  font-size: 1rem;
-  animation-name: slide-from-left;
-  animation-duration: 2s;
-  color: var(--white-shade);
-  position: absolute;
-  top: 60vh;
-  left: 10vw;
-  border: 1px solid var(--white-shade);
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: rgba(36, 36, 36, 0);
-  backdrop-filter: blur(2rem);
-}
-.aboutmeButton:hover {
-  background-color: rgba(36, 36, 36, 0.815);
-}
-.aboutmeButton:active {
-  background-color: var(--white-shade);
+@keyframes slide-from-right {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
 }
 
-.intro2 {
-  position: absolute;
-  bottom: 30vh;
-  right: 10vw;
-  color: var(--white-shade);
-  font-family: Raj-light;
-  font-size: 1.5rem;
+.fromRight {
   animation-name: slide-from-right;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  /* opacity: 100%; */
+}
+
+@keyframes slide-from-left {
+  0% {
+    opacity: 0%;
+    transform: translateX(10vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.fromLeft {
+  animation-name: slide-from-left;
+  animation-duration: 3s;
+}
+
+.pop {
+}
+
+.appear {
+  opacity: 0%;
+  transition: opacity 3s;
+}
+
+.pop {
+  opacity: 100%;
+}
+
+/* /////////////////////works/////////////////// */
+
+.works {
+  background: linear-gradient(
+    to bottom,
+    var(--light-accent),
+    var(--main-accent)
+  );
+  height: 120vh;
 }

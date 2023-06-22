@@ -2,9 +2,17 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: {
-    index: "./src/index.js",
-    domElements: "./src/dom.js",
+    index: {
+      import: "./src/index.js",
+      dependOn: "shared",
+    },
+    another: {
+      import: "./src/dom.js",
+      dependOn: "shared",
+    },
+    shared: "lodash",
   },
   devtool: "inline-source-map",
   plugins: [
@@ -19,6 +27,9 @@ module.exports = {
       __dirname,
       String.raw`D:\programming-as-a-freelancer\portfolio-v1\dist`
     ),
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
   module: {
     rules: [
