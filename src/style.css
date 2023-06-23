@@ -396,14 +396,14 @@ span:hover {
   overflow: hidden;
 }
 
-.prev,
+/* .prev,
 .next {
   font-family: Raj-bold;
   font-size: 5rem;
   color: var(--white-shade);
   background-color: #00000051;
   cursor: pointer;
-}
+} */
 
 .projects {
   outline: 2px solid black;
@@ -424,10 +424,16 @@ span:hover {
 }
 
 .buttonContainer > a {
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
   background-color: var(--dark-accent);
   border-radius: 10rem;
+  text-decoration: none;
+  font-family: Raj-bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slider {
   width: 100%;

@@ -112,19 +112,19 @@ export function layout() {
   works.classList.add("works");
   body.appendChild(works);
 
-  const prev = document.createElement("div");
-  prev.textContent = "<";
-  prev.classList.add("prev");
-  works.appendChild(prev);
+  // const prev = document.createElement("div");
+  // prev.textContent = "<";
+  // prev.classList.add("prev");
+  // works.appendChild(prev);
 
   const slideContainer = document.createElement("div");
   slideContainer.classList.add("slideContainer");
   works.appendChild(slideContainer);
 
-  const next = document.createElement("div");
-  next.textContent = ">";
-  next.classList.add("next");
-  works.appendChild(next);
+  // const next = document.createElement("div");
+  // next.textContent = ">";
+  // next.classList.add("next");
+  // works.appendChild(next);
 
   const span1 = document.createElement("span");
   span1.id = "span1";
@@ -165,16 +165,19 @@ export function layout() {
   slideContainer.appendChild(buttonContainer);
 
   const button1 = document.createElement("a");
+  button1.textContent = "1";
   button1.classList.add("button1");
   button1.href = "#span1";
   buttonContainer.appendChild(button1);
 
   const button2 = document.createElement("a");
+  button2.textContent = "2";
   button2.classList.add("button2");
   button2.href = "#span2";
   buttonContainer.appendChild(button2);
 
   const button3 = document.createElement("a");
+  button3.textContent = "3";
   button3.classList.add("button3");
   button3.href = "#span3";
   buttonContainer.appendChild(button3);
