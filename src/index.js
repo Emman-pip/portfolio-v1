@@ -48,6 +48,11 @@ function animationTrigger(section, animationName, expand = null) {
   appears.forEach((items) => {
     animationTrigger(items, "pop", "expand");
   });
+
+  const rises = document.querySelectorAll(".up");
+  rises.forEach((items) => {
+    animationTrigger(items, "rise");
+  });
 })();
 // const name = "fromRight";
 // animationTrigger(document.querySelector(".AMTitle"), name);

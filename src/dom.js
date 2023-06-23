@@ -78,6 +78,7 @@ export function layout() {
   //about me
   const aboutMeBackground = document.createElement("div");
   aboutMeBackground.classList.add("aboutMeBackground");
+  // aboutMeBackground.classList.add("appear");
   aboutMeBackground.id = "aboutMeBackground";
   body.appendChild(aboutMeBackground);
 
@@ -109,6 +110,7 @@ export function layout() {
   //projects
 
   const works = document.createElement("section");
+  // works.classList.add("appear");
   works.classList.add("works");
   body.appendChild(works);
 
@@ -118,6 +120,7 @@ export function layout() {
   // works.appendChild(prev);
 
   const slideContainer = document.createElement("div");
+  slideContainer.classList.add("left");
   slideContainer.classList.add("slideContainer");
   works.appendChild(slideContainer);
 
@@ -143,19 +146,19 @@ export function layout() {
   slideContainer.appendChild(slider);
 
   const proj1 = new Image();
-  proj1.textContent = "1!";
+  proj1.classList.add("appear");
   proj1.src = weather;
   proj1.classList.add("projects");
   slider.appendChild(proj1);
 
   const proj2 = new Image();
-  proj2.textContent = "2!";
+  proj2.classList.add("appear");
   proj2.src = weather;
   proj2.classList.add("projects");
   slider.appendChild(proj2);
 
   const proj3 = new Image();
-  proj3.textContent = "3!";
+  proj3.classList.add("appear");
   proj3.src = weather;
   proj3.classList.add("projects");
   slider.appendChild(proj3);
@@ -165,19 +168,16 @@ export function layout() {
   slideContainer.appendChild(buttonContainer);
 
   const button1 = document.createElement("a");
-  button1.textContent = "1";
   button1.classList.add("button1");
   button1.href = "#span1";
   buttonContainer.appendChild(button1);
 
   const button2 = document.createElement("a");
-  button2.textContent = "2";
   button2.classList.add("button2");
   button2.href = "#span2";
   buttonContainer.appendChild(button2);
 
   const button3 = document.createElement("a");
-  button3.textContent = "3";
   button3.classList.add("button3");
   button3.href = "#span3";
   buttonContainer.appendChild(button3);
@@ -192,9 +192,10 @@ export function layout() {
   emailSection.appendChild(emailSection100);
 
   const form = document.createElement("form");
-  form.action = "https://formsubmit.co/parrenoemmanuel756@email.com";
+  form.action = "https://formsubmit.co/parrenoemmanuel756@gmail.com";
   form.method = "POST";
   emailSection100.appendChild(form);
+  form.classList.add("up");
 
   const fieldset = document.createElement("fieldset");
   fieldset.classList.add("fieldset");
@@ -230,6 +231,7 @@ export function layout() {
   const submitButton = document.createElement("button");
   submitButton.type = "submit";
   submitButton.textContent = "Send";
+  submitButton.classList.add("submitButton");
   fieldset.appendChild(submitButton);
 
   //more about me
