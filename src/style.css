@@ -206,7 +206,7 @@ img {
   background: linear-gradient(
     to bottom,
     var(--main-color),
-    var(--light-accent) /* var(--light-accent) */
+    var(--dark-accent) /* var(--light-accent) */
   );
   display: flex;
   flex-direction: column;
@@ -231,13 +231,13 @@ img {
       rgba(0, 0, 0, 0.851)
     ),
     url("./pexels-djordje-petrovic-2102416.jpg");
-  background-size: cover;
+  background-position: center -30px;
+  background-size: 80vw auto;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: rgba(14, 9, 9, 0.215);
-  border: 0.5rem solid var(--white-shade);
-  transition: border 2s;
+  background-attachment: scroll;
+  border: 0.5rem solid;
+  border-color: var(--main-color);
   padding: 2rem;
   height: fit-content;
   clip-path: polygon(
@@ -254,24 +254,21 @@ img {
   width: fit-content;
   height: fit-content;
   width: 80vw;
+  outline: 1px solid black;
 }
 
 @keyframes widen {
   0% {
-    width: 30vw;
+    transform: scaleX(0.1);
   }
   100% {
-    width: 80vw;
+    transform: scaleX(1);
   }
 }
 
 .expand {
   animation-name: widen;
   animation-duration: 1.5s;
-}
-
-.aboutMeContainer:hover {
-  border: 0.5rem solid var(--main-accent);
 }
 
 .aboutMeContainer::after {
@@ -385,8 +382,47 @@ span:hover {
 .works {
   background: linear-gradient(
     to bottom,
-    var(--light-accent),
+    var(--dark-accent),
     var(--main-accent)
   );
   height: 120vh;
+}
+/* /////////////////email////////////////////// */
+.emailSection {
+  background: linear-gradient(
+    to bottom,
+    var(--main-accent),
+    var(--light-accent),
+    var(--white-shade)
+  );
+  height: 120vh;
+  text-align: center;
+}
+
+.emailSection100 {
+  text-align: center;
+  /* background-color: black; */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: inline;
+  padding: 1rem;
+}
+
+.fieldset {
+  display: flex;
+  margin: 5rem;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+/* //////////////more/////////////////// */
+
+.more {
+  background: var(--white-shade);
+  height: 40vh;
+  border-top: 1px solid black;
 }

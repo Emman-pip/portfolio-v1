@@ -104,7 +104,62 @@ export function layout() {
 
   //projects
 
-  const works = document.createElement("div");
+  const works = document.createElement("section");
   works.classList.add("works");
   body.appendChild(works);
+
+  //contact me! email page
+  const emailSection = document.createElement("section");
+  emailSection.classList.add("emailSection");
+  body.appendChild(emailSection);
+
+  const emailSection100 = document.createElement("section");
+  emailSection100.classList.add("emailSection100");
+  emailSection.appendChild(emailSection100);
+
+  const form = document.createElement("form");
+  form.action = "https://formsubmit.co/parrenoemmanuel756@email.com";
+  form.method = "POST";
+  emailSection100.appendChild(form);
+
+  const fieldset = document.createElement("fieldset");
+  fieldset.classList.add("fieldset");
+  form.appendChild(fieldset);
+
+  const legend = document.createElement("legend");
+  legend.textContent = "EMAIL ME NOW!";
+  fieldset.appendChild(legend);
+
+  const email = document.createElement("input");
+  email.placeholder = "EMAIL";
+  email.type = "email";
+  email.name = "email";
+  email.required = true;
+  fieldset.appendChild(email);
+
+  const sender = document.createElement("input");
+  sender.placeholder = "NAME";
+  sender.type = "text";
+  sender.name = "name";
+  sender.required = true;
+  fieldset.appendChild(sender);
+
+  const message = document.createElement("textarea");
+  message.placeholder = "MESSAGE";
+  message.name = "message";
+  message.cols = 30;
+  message.rows = 10;
+  message.style.resize = "none";
+  message.required = true;
+  fieldset.appendChild(message);
+
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.textContent = "Send";
+  fieldset.appendChild(submitButton);
+
+  //more about me
+  const moreSection = document.createElement("section");
+  moreSection.classList.add("more");
+  body.appendChild(moreSection);
 }

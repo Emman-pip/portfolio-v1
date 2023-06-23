@@ -11,11 +11,6 @@ function animationTrigger(section, animationName, expand = null) {
   };
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(animationName);
-      } else {
-        entry.target.classList.remove(animationName);
-      }
       if (
         entry.target.className.includes("aboutMeContainer") &&
         entry.isIntersecting
@@ -26,6 +21,11 @@ function animationTrigger(section, animationName, expand = null) {
         !entry.isIntersecting
       ) {
         entry.target.classList.remove(expand);
+      }
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animationName);
+      } else {
+        entry.target.classList.remove(animationName);
       }
     });
   }, options);
