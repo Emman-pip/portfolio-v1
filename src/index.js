@@ -33,31 +33,43 @@ function animationTrigger(section, animationName, expand = null) {
   observer.observe(section);
 }
 
-(() => {
-  const rights = document.querySelectorAll(".right");
+function animationUse(classname, animation1, animation2 = null) {
+  const rights = document.querySelectorAll(classname);
   rights.forEach((items) => {
-    animationTrigger(items, "fromRight");
+    animationTrigger(items, animation1, animation2);
   });
+}
 
-  const lefts = document.querySelectorAll(".left");
-  lefts.forEach((items) => {
-    animationTrigger(items, "fromLeft");
-  });
+(() => {
+  // const rights = document.querySelectorAll(".right");
+  // rights.forEach((items) => {
+  //   animationTrigger(items, "fromRight");
+  // });
+  animationUse(".right", "fromRight");
 
-  const appears = document.querySelectorAll(".appear");
-  appears.forEach((items) => {
-    animationTrigger(items, "pop", "expand");
-  });
+  // const lefts = document.querySelectorAll(".left");
+  // lefts.forEach((items) => {
+  //   animationTrigger(items, "fromLeft");
+  // });
+  animationUse(".left", "fromLeft");
 
-  const rises = document.querySelectorAll(".up");
-  rises.forEach((items) => {
-    animationTrigger(items, "rise");
-  });
+  // const appears = document.querySelectorAll(".appear");
+  // appears.forEach((items) => {
+  //   animationTrigger(items, "pop", "expand");
+  // });
+  animationUse(".appear", "pop", "expand");
 
-  const shivers = document.querySelectorAll(".shiver");
-  shivers.forEach((items) => {
-    animationTrigger(items, "shake");
-  });
+  // const rises = document.querySelectorAll(".up");
+  // rises.forEach((items) => {
+  //   animationTrigger(items, "rise");
+  // });
+  animationUse(".up", "rise");
+
+  // const shivers = document.querySelectorAll(".shiver");
+  // shivers.forEach((items) => {
+  //   animationTrigger(items, "shake");
+  // });
+  animationUse(".shiver", "shake");
 })();
 // const name = "fromRight";
 // animationTrigger(document.querySelector(".AMTitle"), name);

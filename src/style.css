@@ -286,14 +286,6 @@ body {
   animation-duration: 1.5s;
 }
 
-.aboutMeContainer::after {
-  content: "I am not the one in the picture :)";
-  font-family: Raj-light;
-  color: white;
-  font-size: 0.8rem;
-  transition: font-size 0.5s;
-}
-
 .aboutMeContainer:hover::after {
   font-size: 1rem;
 }
