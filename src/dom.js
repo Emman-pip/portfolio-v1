@@ -1,6 +1,7 @@
 import Sea from "./pexels-sampreety-ali-695794.jpg";
 import weather from "./weatherAppV2.png";
 import weatherMobile from "./weatherAppV2mobile.png";
+import project2 from "./proj2.png";
 export function layout() {
   //body
   const body = document.querySelector("body");
@@ -120,7 +121,7 @@ export function layout() {
   // works.appendChild(prev);
 
   const slideContainer = document.createElement("div");
-  slideContainer.classList.add("left");
+  slideContainer.classList.add("up");
   slideContainer.classList.add("slideContainer");
   works.appendChild(slideContainer);
 
@@ -149,33 +150,43 @@ export function layout() {
   proj1.classList.add("appear");
   proj1.src = weather;
   proj1.classList.add("projects");
+  proj1.classList.add("proj1");
+
+  const proj1Mobile = new Image();
+  proj1Mobile.classList.add("proj1Mobile");
+  proj1Mobile.classList.add("appear");
+  proj1Mobile.src = weatherMobile;
+  slider.appendChild(proj1Mobile);
+
   slider.appendChild(proj1);
 
   const proj2 = new Image();
   proj2.classList.add("appear");
-  proj2.src = weather;
+  proj2.src = project2;
   proj2.classList.add("projects");
   slider.appendChild(proj2);
+  proj2.classList.add("proj2");
 
   const proj3 = new Image();
   proj3.classList.add("appear");
   proj3.src = weather;
   proj3.classList.add("projects");
   slider.appendChild(proj3);
+  proj3.classList.add("proj3");
 
   const buttonContainer = document.createElement("div");
   buttonContainer.classList.add("buttonContainer");
   slideContainer.appendChild(buttonContainer);
 
-  const button1 = document.createElement("a");
-  button1.classList.add("button1");
-  button1.href = "#span1";
-  buttonContainer.appendChild(button1);
-
   const button2 = document.createElement("a");
   button2.classList.add("button2");
   button2.href = "#span2";
   buttonContainer.appendChild(button2);
+
+  const button1 = document.createElement("a");
+  button1.classList.add("button1");
+  button1.href = "#span1";
+  buttonContainer.appendChild(button1);
 
   const button3 = document.createElement("a");
   button3.classList.add("button3");
@@ -195,11 +206,11 @@ export function layout() {
   form.action = "https://formsubmit.co/parrenoemmanuel756@gmail.com";
   form.method = "POST";
   emailSection100.appendChild(form);
-  form.classList.add("up");
 
   const fieldset = document.createElement("fieldset");
   fieldset.classList.add("fieldset");
   form.appendChild(fieldset);
+  fieldset.classList.add("shiver");
 
   const legend = document.createElement("legend");
   legend.textContent = "EMAIL ME NOW!";
@@ -238,5 +249,41 @@ export function layout() {
   const moreSection = document.createElement("section");
   moreSection.classList.add("more");
   body.appendChild(moreSection);
+
+  const firstTexts = document.createElement("div");
+  firstTexts.classList.add("additional");
+
+  const secondTexts = document.createElement("div");
+  secondTexts.classList.add("additional");
+
+  const CPnumber = document.createElement("p");
+  secondTexts.appendChild(CPnumber);
+  CPnumber.textContent = "+63 956 688 1489";
+  CPnumber.classList.add("CPnumber");
+
+  const personalMail = document.createElement("p");
+  secondTexts.appendChild(personalMail);
+  personalMail.textContent = "parrenoemmanuel756@gmail.com";
+  personalMail.classList.add("CPnumber");
+  secondTexts.appendChild(personalMail);
+
+  moreSection.appendChild(firstTexts);
+  moreSection.appendChild(secondTexts);
+  const nameContainer2 = document.createElement("div");
+  nameContainer2.classList.add("nameContainer");
+  nameContainer2.style.mixBlendMode = "difference";
+
+  const circle2 = document.createElement("div");
+  circle2.classList.add("circle");
+  nameContainer2.appendChild(circle2);
+
+  const myName2 = document.createElement("div");
+  myName2.classList.add("name");
+  myName2.textContent = "Emmanuel Parreño";
+  nameContainer2.appendChild(myName2);
+
+  // nameContainer2.classList.add("nameContainer2");
+  nameContainer2.classList.add("underline");
+  firstTexts.appendChild(nameContainer2);
 }
 //

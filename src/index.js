@@ -53,6 +53,17 @@ function animationTrigger(section, animationName, expand = null) {
   rises.forEach((items) => {
     animationTrigger(items, "rise");
   });
+
+  const shivers = document.querySelectorAll(".shiver");
+  shivers.forEach((items) => {
+    animationTrigger(items, "shake");
+  });
 })();
 // const name = "fromRight";
 // animationTrigger(document.querySelector(".AMTitle"), name);
+(function openWebsite() {
+  const proj1 = document.querySelector(".proj1");
+  proj1.onclick = () => {
+    window.open("https://emman-pip.github.io/weatherAppv2/");
+  };
+})();

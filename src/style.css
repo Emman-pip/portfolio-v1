@@ -313,23 +313,6 @@ span:hover {
 }
 
 /* ////////////////////extra/////////////////////////////// */
-.underline::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--light-accent);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.underline:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 
 @keyframes slide-from-right {
   0% {
@@ -393,27 +376,40 @@ span:hover {
 .slideContainer {
   height: auto;
   width: 80vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* .prev,
-.next {
-  font-family: Raj-bold;
-  font-size: 5rem;
-  color: var(--white-shade);
-  background-color: #00000051;
-  cursor: pointer;
-} */
+  .next {
+    font-family: Raj-bold;
+    font-size: 5rem;
+    color: var(--white-shade);
+    background-color: #00000051;
+    cursor: pointer;
+  } */
 
 .projects {
-  border-radius: 20px;
-  outline: 2px solid black;
+  border-radius: 2rem;
+  outline: 1rem solid black;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   float: left;
   /* transition: transform 2s;
   transform: translateX(0vw); */
+  cursor: pointer;
+}
+
+.proj1Mobile {
+  z-index: 2;
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  left: 5vh;
+  bottom: 0;
+  outline: 0.5rem solid gray;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
 .buttonContainer {
@@ -459,11 +455,11 @@ span:hover {
   -webkit-transition: transform 2s;
   -moz-transition: transform 2s;
   -o-transition: transform 2s;
-  transform: translateX(-80vw);
+  transform: translateX(0vw);
 }
 
 #span1:target ~ .slider {
-  transform: translateX(0vw);
+  transform: translateX(-80vw);
 }
 
 #span2:target ~ .slider {
@@ -522,6 +518,7 @@ input,
 textarea {
   font-family: Raj-regular;
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .submitButton {
@@ -535,9 +532,60 @@ textarea {
 
 .more {
   background: var(--white-shade);
-  height: 40vh;
+  height: 15vh;
   border-top: 1px solid black;
+  display: flex;
+  justify-content: space-around;
 }
+
+.additional {
+  /* background-color: var(--main-accent); */
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-family: Raj-light;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .nameContainer2 {
+  letter-spacing: 0.7rem;
+  cursor: default;
+  font-family: Raj-regular;
+  font-size: 2rem;
+} */
+
+.CPnumber {
+  /* letter-spacing: 0.7rem; */
+  cursor: pointer;
+  user-select: all;
+  /* font-family: Raj-regular; */
+  /* font-size: 2rem; */
+  height: fit-content;
+  overflow: visible;
+  text-align: center;
+}
+
+/* .CPnumber:after {
+  content: "";
+  position: absolute;
+
+  height: 3px;
+  width: 10%;
+  background-color: var(--main-accent);
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.CPnumber:hover:after {
+  width: 100%;
+} */
+
+/* ///////////////////////////////////// */
 
 @keyframes rise {
   from {
@@ -553,4 +601,42 @@ textarea {
 .rise {
   animation-name: rise;
   animation-duration: 3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(-0.5, 1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.shiver {
+  opacity: 0;
+}
+
+.shake {
+  opacity: 1;
+  animation-name: shake;
+  animation-duration: 3s;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-accent);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
