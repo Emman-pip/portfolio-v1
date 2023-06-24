@@ -558,6 +558,10 @@ span:hover {
   transform: rotate(15deg);
 }
 
+.lastBackground2 {
+  bottom: 20vh;
+}
+
 form {
   z-index: 2;
   display: inline;

@@ -218,6 +218,11 @@ export function layout() {
   lastBackground.classList.add("lastBackground");
   emailSection.appendChild(lastBackground);
 
+  const lastBackground2 = document.createElement("DIV");
+  lastBackground2.classList.add("lastBackground");
+  lastBackground2.classList.add("lastBackground2");
+  emailSection.appendChild(lastBackground2);
+
   const emailSection100 = document.createElement("section");
   emailSection100.classList.add("emailSection100");
   emailSection.appendChild(emailSection100);
