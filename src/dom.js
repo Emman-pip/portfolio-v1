@@ -2,6 +2,10 @@ import Sea from "./pexels-sampreety-ali-695794.jpg";
 import weather from "./weatherAppV2.png";
 import weatherMobile from "./weatherAppV2mobile.png";
 import project2 from "./proj2.png";
+
+import IconPhone from "./phone-dial.svg";
+import IconEmail from "./email.svg";
+
 export function layout() {
   //body
   const body = document.querySelector("body");
@@ -274,17 +278,31 @@ export function layout() {
 
   const secondTexts = document.createElement("div");
   secondTexts.classList.add("additional");
+  secondTexts.classList.add("secondAdditional");
 
-  const CPnumber = document.createElement("p");
+  const CPnumber = document.createElement("div");
   secondTexts.appendChild(CPnumber);
+  CPnumber.classList.add("underline");
   CPnumber.textContent = "+63 956 688 1489";
   CPnumber.classList.add("CPnumber");
 
-  const personalMail = document.createElement("p");
+  const cpIcon = new Image();
+  cpIcon.classList.add("smallIcon");
+  cpIcon.src = IconPhone;
+  CPnumber.appendChild(cpIcon);
+
+  const personalMail = document.createElement("div");
   secondTexts.appendChild(personalMail);
   personalMail.textContent = "parrenoemmanuel756@gmail.com";
   personalMail.classList.add("CPnumber");
+  personalMail.classList.add("emailAddress");
+  personalMail.classList.add("underline");
   secondTexts.appendChild(personalMail);
+
+  const emailIcon = new Image();
+  emailIcon.classList.add("smallIcon");
+  emailIcon.src = IconEmail;
+  personalMail.appendChild(emailIcon);
 
   moreSection.appendChild(firstTexts);
   moreSection.appendChild(secondTexts);
