@@ -88,6 +88,11 @@ export function layout() {
 
   aboutMeBackground.appendChild(hundredVHcontainer);
 
+  const slit = document.createElement("div");
+  slit.classList.add("slit");
+
+  aboutMeBackground.appendChild(slit);
+
   const aboutMeContainer = document.createElement("div");
   aboutMeContainer.classList.add("aboutMeContainer");
   aboutMeContainer.classList.add("appear");
@@ -106,9 +111,16 @@ export function layout() {
     "I am a self-taught <span>web developer</span>. Currently, I am studying <span>BS in information technology at the Batangas State University</span>. I have been honing my skills since late 2022 (through the <span>Odin Project</span> and other online resources). <span>I am confident with my entry-level front-end development skills</span>. My primary languages are <span>HTML, CSS, and Javascript</span> - but I can also use Python, Webpack, CLI, and C++ to a certain extent.";
   aboutMeContainer.appendChild(aboutMeParag);
 
-  //slideshow
-
   //projects
+  const worksTitle = document.createElement("div");
+  body.appendChild(worksTitle);
+  worksTitle.classList.add("worksTitle");
+
+  const worksTitleText = document.createElement("div");
+  worksTitleText.classList.add("worksTitle");
+  worksTitleText.classList.add("appear");
+  worksTitleText.textContent = "SOME OF MY WORKS";
+  worksTitle.appendChild(worksTitleText);
 
   const works = document.createElement("section");
   // works.classList.add("appear");
@@ -213,7 +225,7 @@ export function layout() {
   fieldset.classList.add("shiver");
 
   const legend = document.createElement("legend");
-  legend.textContent = "EMAIL ME NOW!";
+  legend.innerHTML = `Interested? <span class="glowingmail">Email me now!</span>`;
   fieldset.appendChild(legend);
 
   const email = document.createElement("input");
@@ -229,6 +241,13 @@ export function layout() {
   sender.name = "name";
   sender.required = true;
   fieldset.appendChild(sender);
+
+  const subject = document.createElement("input");
+  subject.placeholder = "MAIL'S SUBJECT";
+  subject.type = "text";
+  subject.name = "subject";
+  subject.required = true;
+  fieldset.appendChild(subject);
 
   const message = document.createElement("textarea");
   message.placeholder = "MESSAGE";
