@@ -92,6 +92,15 @@ function socmedContent(icon, message, animation = null) {
   const socIcon = new Image();
   socIcon.classList.add("socicons");
   socIcon.src = icon;
+  socIcon.onclick = () => {
+    if (icon == linkedin) {
+      window.open("https://www.linkedin.com/in/emmanuel-undefined-997042259/");
+    } else if (icon == ig) {
+      window.open("https://www.instagram.com/em.n71/");
+    } else if (icon == github) {
+      window.open("https://github.com/Emman-pip");
+    }
+  };
   container.appendChild(socIcon);
   const text = document.createElement("div");
   text.classList.add("soctext");
