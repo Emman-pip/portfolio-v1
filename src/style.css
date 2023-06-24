@@ -544,15 +544,18 @@ span:hover {
 .lastBackground {
   position: absolute;
   z-index: 1;
-  width: 100vw;
+  width: 120vw;
   height: 30vh;
   /* background-color: black; */
   margin-top: auto;
   margin-bottom: auto;
+  left: -10vh;
   top: 0;
   bottom: 0;
+  /* background-color: black; */
   background: var(--linear-g);
   backdrop-filter: blur(5rem);
+  transform: rotate(15deg);
 }
 
 form {
