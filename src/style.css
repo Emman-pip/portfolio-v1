@@ -572,7 +572,9 @@ form {
   z-index: 2;
   display: inline;
   padding: 2rem;
-  background-color: var(--white-shade);
+  /* background-color: var(--white-shade); */
+  background-color: rgba(255, 255, 255, 0.564);
+  backdrop-filter: blur(1rem);
   border-radius: 2rem;
   border: 0.1rem solid rgba(111, 111, 111, 0.137);
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.086);
@@ -586,9 +588,9 @@ form {
   font-family: Raj-bold;
   font-size: 3rem;
   color: var(--main-color);
-  background-color: rgba(255, 255, 255, 0.478);
+  /* background-color: rgba(255, 255, 255, 0.478); */
   gap: 1rem;
-  backdrop-filter: blur(1rem);
+  /* backdrop-filter: blur(1rem); */
   /* mix-blend-mode: luminosity; */
   border: 0.1rem solid rgba(111, 111, 111, 0.137);
 }
