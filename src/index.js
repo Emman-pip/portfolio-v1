@@ -128,7 +128,8 @@ useColorChangeOnScroll(
 );
 useColorChangeOnScroll(
   "form",
-  "bffcf9",
+  "white",
+  // "bffcf9",
   socmedContent(feedback, "You could send feedbacks too.")
 );
 
