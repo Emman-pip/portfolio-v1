@@ -39,38 +39,15 @@ function animationUse(classname, animation1, animation2 = null) {
     animationTrigger(items, animation1, animation2);
   });
 }
-
+//loop can be used here
 (() => {
-  // const rights = document.querySelectorAll(".right");
-  // rights.forEach((items) => {
-  //   animationTrigger(items, "fromRight");
-  // });
   animationUse(".right", "fromRight");
-
-  // const lefts = document.querySelectorAll(".left");
-  // lefts.forEach((items) => {
-  //   animationTrigger(items, "fromLeft");
-  // });
   animationUse(".left", "fromLeft");
-
-  // const appears = document.querySelectorAll(".appear");
-  // appears.forEach((items) => {
-  //   animationTrigger(items, "pop", "expand");
-  // });
   animationUse(".appear", "pop", "expand");
-
-  // const rises = document.querySelectorAll(".up");
-  // rises.forEach((items) => {
-  //   animationTrigger(items, "rise");
-  // });
   animationUse(".up", "rise");
-
-  // const shivers = document.querySelectorAll(".shiver");
-  // shivers.forEach((items) => {
-  //   animationTrigger(items, "shake");
-  // });
   animationUse(".shiver", "shake");
 })();
+
 // const name = "fromRight";
 // animationTrigger(document.querySelector(".AMTitle"), name);
 (function openWebsite() {
@@ -79,3 +56,38 @@ function animationUse(classname, animation1, animation2 = null) {
     window.open("https://emman-pip.github.io/weatherAppv2/");
   };
 })();
+
+function changeColorOnScroll(toObserve, element, color) {
+  const options = {
+    root: null,
+    threshold: 0.4,
+    rootMargin: "25px",
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      console.log("lol");
+      if (entry.isIntersecting) {
+        element.style.backgroundColor = color;
+      }
+    });
+  }, options);
+  observer.observe(document.querySelector(toObserve));
+}
+
+function useColorChangeOnScroll(observe, color) {
+  // const toObserve = document.querySelector(observe);
+  const toChange = document.querySelector(".socmedContainer");
+  changeColorOnScroll(observe, toChange, color);
+}
+
+useColorChangeOnScroll(".backgroundSea", "white");
+useColorChangeOnScroll(".hundredVHcontainer", "#47817f");
+useColorChangeOnScroll(".slideContainer", "#00c9c8");
+useColorChangeOnScroll("form", "bffcf9");
+
+// changeColorOnScroll(
+//   ".backgroundSea",
+//   document.querySelector(".socmedContainer"),
+//   "black"
+// );

@@ -101,6 +101,7 @@ body {
   top: 0;
   right: 0;
   background-color: var(--white-shade);
+  transition: background-color 3s;
   mix-blend-mode: normal;
 }
 
@@ -679,4 +680,12 @@ textarea {
 .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.black {
+  background-color: var(--main-color);
+}
+
+.mainAccent {
+  background-color: var(--main-accent);
 }
