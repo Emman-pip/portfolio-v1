@@ -221,12 +221,12 @@ export function layout() {
   const form = document.createElement("form");
   form.action = "https://formsubmit.co/parrenoemmanuel756@gmail.com";
   form.method = "POST";
+  form.classList.add("shiver");
   emailSection100.appendChild(form);
 
   const fieldset = document.createElement("fieldset");
   fieldset.classList.add("fieldset");
   form.appendChild(fieldset);
-  fieldset.classList.add("shiver");
 
   const legend = document.createElement("legend");
   legend.innerHTML = `Interested? <span class="glowingmail">Email me now!</span>`;

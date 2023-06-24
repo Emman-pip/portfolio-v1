@@ -538,12 +538,15 @@ span:hover {
 
 form {
   display: inline;
-  padding: 1rem;
+  padding: 2rem;
+  background-color: var(--white-shade);
+  border-radius: 2rem;
+  border: 0.1rem solid rgba(111, 111, 111, 0.137);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.086);
 }
 
 .fieldset {
   display: flex;
-  margin: 5rem;
   padding: 1rem;
   flex-direction: column;
   border-radius: 1rem;
@@ -553,7 +556,8 @@ form {
   background-color: rgba(255, 255, 255, 0.478);
   gap: 1rem;
   backdrop-filter: blur(1rem);
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
+  border: 0.1rem solid rgba(111, 111, 111, 0.137);
 }
 
 .glowingmail {
@@ -566,13 +570,25 @@ textarea {
   font-family: Raj-regular;
   font-size: 1rem;
   padding: 0.5rem;
+  border: 0.1rem solid rgba(111, 111, 111, 0.137);
+  border-radius: 0.5rem;
 }
 
 .submitButton {
   font-family: Raj-medium;
   font-size: 1.5rem;
-  color: black;
+  color: rgb(61, 61, 61);
   height: 2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(111, 111, 111, 0.137);
+}
+
+.submitButton:hover {
+  border: 0.1rem solid rgba(111, 111, 111, 0.537);
+}
+
+.submitButton:active {
+  border: 0.1rem solid rgba(111, 111, 111);
 }
 
 /* //////////////more/////////////////// */
@@ -612,7 +628,7 @@ textarea {
 .CPnumber {
   /* letter-spacing: 0.7rem; */
   cursor: pointer;
-  user-select: all;
+  user-select: none;
   /* font-family: Raj-regular; */
   /* font-size: 2rem; */
   height: fit-content;
