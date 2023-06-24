@@ -408,6 +408,7 @@ span:hover {
 .projects {
   border-radius: 2rem;
   outline: 1rem solid black;
+  -webkit-outline-radius: 2rem;
   width: 80vw;
   margin-right: auto;
   margin-left: auto;
@@ -426,6 +427,7 @@ span:hover {
   left: 5vh;
   bottom: 0;
   outline: 0.5rem solid gray;
+  -webkit-outline-radius: 1rem;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
