@@ -29,7 +29,7 @@ export function layout() {
 
   const socmedContainer = document.createElement("div");
   socmedContainer.classList.add("socmedContainer");
-  topBar.appendChild(socmedContainer);
+  body.appendChild(socmedContainer);
 
   const myNameDetails = document.createElement("div");
   myNameDetails.classList.add("vSmallText");

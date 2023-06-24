@@ -92,12 +92,16 @@ body {
 }
 
 .socmedContainer {
-  mix-blend-mode: normal;
-  background-color: var(--white-shade);
-  height: 100%;
+  z-index: 11;
+  height: 10%;
   width: 30vw;
   border-bottom-left-radius: 3rem;
-  display: fixed;
+  display: inline;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--white-shade);
+  mix-blend-mode: normal;
 }
 
 .firstPart {
