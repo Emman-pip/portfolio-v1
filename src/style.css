@@ -525,6 +525,7 @@ span:hover {
   );
   height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 .emailSection100 {
@@ -536,7 +537,22 @@ span:hover {
   align-items: center;
 }
 
+.lastBackground {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 30vh;
+  /* background-color: black; */
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  background: var(--linear-g);
+  backdrop-filter: blur(5rem);
+}
+
 form {
+  z-index: 2;
   display: inline;
   padding: 2rem;
   background-color: var(--white-shade);
@@ -628,7 +644,7 @@ textarea {
 .CPnumber {
   /* letter-spacing: 0.7rem; */
   cursor: pointer;
-  user-select: none;
+  user-select: all;
   /* font-family: Raj-regular; */
   /* font-size: 2rem; */
   height: fit-content;
@@ -639,6 +655,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  color: var(--main-color);
 }
 
 .smallIcon {

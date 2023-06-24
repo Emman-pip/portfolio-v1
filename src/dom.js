@@ -214,6 +214,10 @@ export function layout() {
   emailSection.classList.add("emailSection");
   body.appendChild(emailSection);
 
+  const lastBackground = document.createElement("DIV");
+  lastBackground.classList.add("lastBackground");
+  emailSection.appendChild(lastBackground);
+
   const emailSection100 = document.createElement("section");
   emailSection100.classList.add("emailSection100");
   emailSection.appendChild(emailSection100);
@@ -280,10 +284,11 @@ export function layout() {
   secondTexts.classList.add("additional");
   secondTexts.classList.add("secondAdditional");
 
-  const CPnumber = document.createElement("div");
+  const CPnumber = document.createElement("a");
   secondTexts.appendChild(CPnumber);
   CPnumber.classList.add("underline");
   CPnumber.textContent = "+63 956 688 1489";
+  CPnumber.href = "tel:+639566881489";
   CPnumber.classList.add("CPnumber");
 
   const cpIcon = new Image();
@@ -291,8 +296,9 @@ export function layout() {
   cpIcon.src = IconPhone;
   CPnumber.appendChild(cpIcon);
 
-  const personalMail = document.createElement("div");
+  const personalMail = document.createElement("a");
   secondTexts.appendChild(personalMail);
+  personalMail.href = "mailto:parrenoemmanuel756@gmail.com";
   personalMail.textContent = "parrenoemmanuel756@gmail.com";
   personalMail.classList.add("CPnumber");
   personalMail.classList.add("emailAddress");
