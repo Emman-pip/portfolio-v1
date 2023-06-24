@@ -314,8 +314,10 @@ export function layout() {
 
   moreSection.appendChild(firstTexts);
   moreSection.appendChild(secondTexts);
+
   const nameContainer2 = document.createElement("div");
   nameContainer2.classList.add("nameContainer");
+  nameContainer2.classList.add("nameContainer2");
   nameContainer2.style.mixBlendMode = "difference";
 
   const circle2 = document.createElement("div");

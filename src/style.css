@@ -550,7 +550,7 @@ span:hover {
 .lastBackground {
   position: absolute;
   z-index: 1;
-  width: 110vw;
+  width: 120vw;
   height: 30vh;
   /* background-color: black; */
   margin-top: auto;
@@ -759,4 +759,8 @@ textarea {
 
 .mainAccent {
   background-color: var(--main-accent);
+}
+
+.nameContainer2 {
+  position: absolute;
 }
