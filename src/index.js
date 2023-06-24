@@ -1,6 +1,9 @@
 import "./style.css";
 import { layout } from "./dom.js";
-
+import linkedin from "./linkedinLogo.png";
+import ig from "./igLogo.png";
+import github from "./githubLogo.png";
+import feedback from "./comment-quote.svg";
 layout();
 
 function animationTrigger(section, animationName, expand = null) {
@@ -57,7 +60,7 @@ function animationUse(classname, animation1, animation2 = null) {
   };
 })();
 
-function changeColorOnScroll(toObserve, element, color) {
+function changeColorOnScroll(toObserve, element, color, icon) {
   const options = {
     root: null,
     threshold: 0.4,
@@ -65,26 +68,60 @@ function changeColorOnScroll(toObserve, element, color) {
   };
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      console.log(entry);
-      console.log("lol");
       if (entry.isIntersecting) {
+        element.innerHTML = "";
         element.style.backgroundColor = color;
+        element.appendChild(icon);
+      } else if (!entry.isIntersecting) {
+        element.removeChild(icon);
       }
     });
   }, options);
   observer.observe(document.querySelector(toObserve));
 }
 
-function useColorChangeOnScroll(observe, color) {
+function useColorChangeOnScroll(observe, color, icon) {
   // const toObserve = document.querySelector(observe);
   const toChange = document.querySelector(".socmedContainer");
-  changeColorOnScroll(observe, toChange, color);
+  changeColorOnScroll(observe, toChange, color, icon);
 }
 
-useColorChangeOnScroll(".backgroundSea", "white");
-useColorChangeOnScroll(".hundredVHcontainer", "#47817f");
-useColorChangeOnScroll(".slideContainer", "#00c9c8");
-useColorChangeOnScroll("form", "bffcf9");
+function socmedContent(icon, message, animation = null) {
+  const container = document.createElement("div");
+  container.classList.add("socmedContent");
+  const socIcon = new Image();
+  socIcon.classList.add("socicons");
+  socIcon.src = icon;
+  container.appendChild(socIcon);
+  const text = document.createElement("div");
+  text.classList.add("soctext");
+  text.textContent = message;
+  container.appendChild(text);
+
+  return [container][0];
+}
+
+console.log(socmedContent(linkedin, "see my LinkedIn!"));
+useColorChangeOnScroll(
+  ".backgroundSea",
+  "white",
+  socmedContent(linkedin, "see my LinkedIn!")
+);
+useColorChangeOnScroll(
+  ".hundredVHcontainer",
+  "#47817f",
+  socmedContent(github, "<- GitHub!!!")
+);
+useColorChangeOnScroll(
+  ".slideContainer",
+  "#00c9c8",
+  socmedContent(ig, "I also have Insta :)")
+);
+useColorChangeOnScroll(
+  "form",
+  "bffcf9",
+  socmedContent(feedback, "You could send feedbacks too.")
+);
 
 // changeColorOnScroll(
 //   ".backgroundSea",

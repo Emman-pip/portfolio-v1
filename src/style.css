@@ -94,7 +94,7 @@ body {
 .socmedContainer {
   z-index: 11;
   height: 10%;
-  width: 30vw;
+  width: 25vw;
   border-bottom-left-radius: 3rem;
   display: inline;
   position: fixed;
@@ -103,6 +103,26 @@ body {
   background-color: var(--white-shade);
   transition: background-color 3s;
   mix-blend-mode: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.socmedContent {
+  display: flex;
+}
+.socicons {
+  width: 3rem;
+  cursor: pointer;
+}
+.soctext {
+  margin-left: 1rem;
+  font-family: Raj-light;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .firstPart {
