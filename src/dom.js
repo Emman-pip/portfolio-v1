@@ -77,9 +77,6 @@ export function layout() {
 
   //page break
 
-  const pagebreak = document.createElement("div");
-  pagebreak.classList.add("pagebreak");
-
   //about me
   const aboutMeBackground = document.createElement("div");
   aboutMeBackground.classList.add("aboutMeBackground");
