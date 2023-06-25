@@ -128,20 +128,20 @@ export function layout() {
   works.classList.add("works");
   body.appendChild(works);
 
-  // const prev = document.createElement("div");
-  // prev.textContent = "<";
-  // prev.classList.add("prev");
-  // works.appendChild(prev);
+  const prev = document.createElement("div");
+  prev.textContent = "<";
+  prev.classList.add("prev");
+  works.appendChild(prev);
 
   const slideContainer = document.createElement("div");
-  slideContainer.classList.add("up");
+  // slideContainer.classList.add("up");
   slideContainer.classList.add("slideContainer");
   works.appendChild(slideContainer);
 
-  // const next = document.createElement("div");
-  // next.textContent = ">";
-  // next.classList.add("next");
-  // works.appendChild(next);
+  const next = document.createElement("div");
+  next.textContent = ">";
+  next.classList.add("next");
+  works.appendChild(next);
 
   //////////////////SLIDER//////////////////////////////////////////
   const slider = document.createElement("div");

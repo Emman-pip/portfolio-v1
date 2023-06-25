@@ -110,7 +110,6 @@ function socmedContent(icon, message, animation = null) {
   return [container][0];
 }
 
-console.log(socmedContent(linkedin, "see my LinkedIn!"));
 useColorChangeOnScroll(
   ".backgroundSea",
   "white",
@@ -138,3 +137,11 @@ useColorChangeOnScroll(
 //   document.querySelector(".socmedContainer"),
 //   "black"
 // );
+
+// slider
+function slider() {
+  const projects = document.querySelectorAll(".projects");
+  projects.forEach((image, index) => {
+    image.style.left = `${index * 100}%`;
+  });
+}

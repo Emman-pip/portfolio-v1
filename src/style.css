@@ -423,35 +423,57 @@ span:hover {
 /* //////////////////SLIDER////////////////////////////////////////// */
 
 .slideContainer {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   height: auto;
   width: 80vw;
   /* overflow: hidden; */
+  /* background-color: black; */
+  position: relative;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  scroll-behavior: smooth;
+
+  /* transition: transform 2s; */
+  /* -webkit-transition: transform 2s; */
+  /* -moz-transition: transform 2s; */
+  /* -o-transition: transform 2s; */
+  /* transform: translateX(0vw); */
+  /* TODO */
+  /* display: none; */
 }
 
-/* .prev,
-  .next {
-    font-family: Raj-bold;
-    font-size: 5rem;
-    color: var(--white-shade);
-    background-color: #00000051;
-    cursor: pointer;
-  } */
+.prev,
+.next {
+  font-family: Raj-bold;
+  font-size: 5rem;
+  color: var(--white-shade);
+  background-color: #00000051;
+  cursor: pointer;
+}
 
 .projects {
   border-radius: 2rem;
-  outline: 1rem solid black;
-  -webkit-outline-radius: 2rem;
+  /* outline: 1rem solid black; */
+  /* -webkit-outline-radius: 2rem; */
   width: 80vw;
-  margin-right: auto;
-  margin-left: auto;
-  float: left;
-  /* transition: transform 2s;
-  transform: translateX(0vw); */
+  transition: transform 2s;
   cursor: pointer;
-  box-shadow: 2rem 2rem 1rem rgba(0, 0, 0, 0.411);
+  box-shadow: 2rem 2rem 1rem rgba(0, 0, 0, 0.193);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.proj1Mobile {
+/* .proj1Mobile {
   z-index: 2;
   height: 30vh;
   width: auto;
@@ -462,31 +484,13 @@ span:hover {
   -webkit-outline-radius: 1rem;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
-}
+} */
 
-.projects:first-child::after {
+/* .projects:first-child::after {
   content: "1";
   margin-top: -10vw;
   color: black;
-}
-
-.slider {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  scroll-behavior: smooth;
-  margin-top: 10vh;
-  margin-bottom: 3vh;
-
-  transition: transform 2s;
-  -webkit-transition: transform 2s;
-  -moz-transition: transform 2s;
-  -o-transition: transform 2s;
-  transform: translateX(0vw);
-  /* TODO */
-  /* display: none; */
-}
+} */
 
 /* //////////////////SLIDER////////////////////////////////////////// */
 
