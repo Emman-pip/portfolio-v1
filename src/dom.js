@@ -147,9 +147,10 @@ export function layout() {
   const slider = document.createElement("div");
   slider.classList.add("slider");
   slideContainer.appendChild(slider);
+  // slider.classList.add("up");
 
   const proj1 = new Image();
-  // proj1.classList.add("appear");
+  // proj1.classList.add("up");
   proj1.src = weather;
   proj1.classList.add("projects");
   proj1.classList.add("proj1");
@@ -249,6 +250,7 @@ export function layout() {
   const moreSection = document.createElement("section");
   moreSection.classList.add("more");
   body.appendChild(moreSection);
+  moreSection.classList.add("appear");
 
   const firstTexts = document.createElement("div");
   firstTexts.classList.add("additional");
