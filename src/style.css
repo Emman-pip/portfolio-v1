@@ -488,21 +488,6 @@ span:hover {
   /* display: none; */
 }
 
-#span1:target ~ .slider {
-  transform: translateX(-80vw);
-}
-
-#span2:target ~ .slider {
-  transform: translateX(-80vw);
-}
-
-#span2:target ~ .slider {
-  transform: translateX(-80vw);
-}
-
-#span3:target ~ .slider {
-  transform: translateX(-160vw);
-}
 /* //////////////////SLIDER////////////////////////////////////////// */
 
 /* /////////////////email////////////////////// */

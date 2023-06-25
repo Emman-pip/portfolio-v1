@@ -143,17 +143,6 @@ export function layout() {
   // next.classList.add("next");
   // works.appendChild(next);
 
-  const span1 = document.createElement("span");
-  span1.id = "span1";
-  slideContainer.appendChild(span1);
-
-  const span2 = document.createElement("span");
-  span2.id = "span2";
-  slideContainer.appendChild(span2);
-
-  const span3 = document.createElement("span");
-  span2.id = "span3";
-  slideContainer.appendChild(span3);
   //////////////////SLIDER//////////////////////////////////////////
   const slider = document.createElement("div");
   slider.classList.add("slider");
