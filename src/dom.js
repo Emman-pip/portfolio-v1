@@ -154,7 +154,7 @@ export function layout() {
   const span3 = document.createElement("span");
   span2.id = "span3";
   slideContainer.appendChild(span3);
-
+  //////////////////SLIDER//////////////////////////////////////////
   const slider = document.createElement("div");
   slider.classList.add("slider");
   slideContainer.appendChild(slider);
@@ -169,7 +169,7 @@ export function layout() {
   proj1Mobile.classList.add("proj1Mobile");
   proj1Mobile.classList.add("appear");
   proj1Mobile.src = weatherMobile;
-  slider.appendChild(proj1Mobile);
+  proj1.appendChild(proj1Mobile);
 
   slider.appendChild(proj1);
 
@@ -187,25 +187,7 @@ export function layout() {
   slider.appendChild(proj3);
   proj3.classList.add("proj3");
 
-  const buttonContainer = document.createElement("div");
-  buttonContainer.classList.add("buttonContainer");
-  slideContainer.appendChild(buttonContainer);
-
-  const button2 = document.createElement("a");
-  button2.classList.add("button2");
-  button2.href = "#span2";
-  buttonContainer.appendChild(button2);
-
-  const button1 = document.createElement("a");
-  button1.classList.add("button1");
-  button1.href = "#span1";
-  buttonContainer.appendChild(button1);
-
-  const button3 = document.createElement("a");
-  button3.classList.add("button3");
-  button3.href = "#span3";
-  buttonContainer.appendChild(button3);
-
+  //////////////////SLIDER//////////////////////////////////////////
   //contact me! email page
   const emailSection = document.createElement("section");
   emailSection.classList.add("emailSection");
