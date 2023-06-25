@@ -139,9 +139,37 @@ useColorChangeOnScroll(
 // );
 
 // slider
-function slider() {
+function sliderFunc() {
   const projects = document.querySelectorAll(".projects");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+
   projects.forEach((image, index) => {
     image.style.left = `${index * 100}%`;
   });
+
+  function slider(sign = "") {
+    projects.forEach((image, index) => {
+      image.style.transform += `translate(${sign}${80}vw)`;
+    });
+  }
+  (function sliderButtons() {
+    let i = 0;
+    next.onclick = () => {
+      if (i == 2) {
+        return;
+      }
+      slider("-");
+      i++;
+    };
+    prev.onclick = () => {
+      if (i == 0) {
+        return;
+      }
+      slider();
+      i--;
+    };
+  })();
 }
+
+sliderFunc();

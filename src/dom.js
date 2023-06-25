@@ -149,28 +149,28 @@ export function layout() {
   slideContainer.appendChild(slider);
 
   const proj1 = new Image();
-  proj1.classList.add("appear");
+  // proj1.classList.add("appear");
   proj1.src = weather;
   proj1.classList.add("projects");
   proj1.classList.add("proj1");
 
   const proj1Mobile = new Image();
   proj1Mobile.classList.add("proj1Mobile");
-  proj1Mobile.classList.add("appear");
+  // proj1Mobile.classList.add("appear");
   proj1Mobile.src = weatherMobile;
   proj1.appendChild(proj1Mobile);
 
   slider.appendChild(proj1);
 
   const proj2 = new Image();
-  proj2.classList.add("appear");
+  // proj2.classList.add("appear");
   proj2.src = project2;
   proj2.classList.add("projects");
   slider.appendChild(proj2);
   proj2.classList.add("proj2");
 
   const proj3 = new Image();
-  proj3.classList.add("appear");
+  // proj3.classList.add("appear");
   proj3.src = weather;
   proj3.classList.add("projects");
   slider.appendChild(proj3);
