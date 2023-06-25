@@ -537,7 +537,7 @@ span:hover {
   /* background-color: black; */
   background: var(--linear-g);
   backdrop-filter: blur(5rem);
-  transform: rotate(15deg);
+  transform: rotate(10deg);
 }
 
 .lastBackground2 {
