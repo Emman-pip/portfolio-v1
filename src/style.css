@@ -193,7 +193,6 @@ body {
   position: absolute;
   top: 60vh;
   left: 10vw;
-  border: 1px solid var(--white-shade);
   border-radius: 1rem;
   padding: 1rem;
   background-color: rgba(36, 36, 36, 0);
@@ -201,8 +200,12 @@ body {
   width: fit-content;
   height: fit-content;
   text-decoration: none;
+  border: 1px solid var(--white-shade);
+  transition: outline 1s;
 }
 .aboutmeButton:hover {
+  border: 1px solid var(--main-accent);
+  color: var(--main-accent);
   background-color: rgba(36, 36, 36, 0.815);
 }
 .aboutmeButton:active {
