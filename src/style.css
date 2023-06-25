@@ -478,25 +478,6 @@ span:hover {
   /* opacity: 0.7; */
 }
 
-/* .proj1Mobile {
-  z-index: 2;
-  height: 30vh;
-  width: auto;
-  position: absolute;
-  left: 5vh;
-  bottom: 0;
-  outline: 0.5rem solid gray;
-  -webkit-outline-radius: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 0.5rem black;
-} */
-
-/* .projects:first-child::after {
-  content: "1";
-  margin-top: -10vw;
-  color: black;
-} */
-
 /* //////////////////SLIDER////////////////////////////////////////// */
 
 /* /////////////////email////////////////////// */
