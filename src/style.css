@@ -439,7 +439,7 @@ span:hover {
   height: 65vh;
   display: flex;
   scroll-behavior: smooth;
-  /* overflow: hidden; */
+  overflow: hidden;
 
   /* outline: 10px solid red; */
   /* background-color: #000000; */
@@ -476,21 +476,20 @@ span:hover {
   margin-top: auto;
   margin-bottom: auto;
   /* opacity: 0.7; */
-  position: relative;
 }
 
-.proj1Mobile {
-  z-index: 3;
+/* .proj1Mobile {
+  z-index: 2;
   height: 30vh;
   width: auto;
+  position: absolute;
+  left: 5vh;
+  bottom: 0;
   outline: 0.5rem solid gray;
   -webkit-outline-radius: 1rem;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+} */
 
 /* .projects:first-child::after {
   content: "1";

@@ -155,6 +155,12 @@ export function layout() {
   proj1.classList.add("projects");
   proj1.classList.add("proj1");
 
+  const proj1Mobile = new Image();
+  proj1Mobile.classList.add("proj1Mobile");
+  // proj1Mobile.classList.add("appear");
+  proj1Mobile.src = weatherMobile;
+  proj1.appendChild(proj1Mobile);
+
   slider.appendChild(proj1);
 
   const proj2 = new Image();
