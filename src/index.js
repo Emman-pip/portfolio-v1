@@ -9,7 +9,7 @@ layout();
 function animationTrigger(section, animationName, expand = null) {
   const options = {
     root: null,
-    threshold: 0.4,
+    threshold: 0,
     rootMargin: "25px",
   };
   const observer = new IntersectionObserver((entries, observer) => {
@@ -63,8 +63,8 @@ function animationUse(classname, animation1, animation2 = null) {
 function changeColorOnScroll(toObserve, element, color, icon) {
   const options = {
     root: null,
-    threshold: 0.4,
-    rootMargin: "25px",
+    threshold: 0,
+    rootMargin: "0px",
   };
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {

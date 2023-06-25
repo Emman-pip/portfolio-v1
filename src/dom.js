@@ -254,6 +254,7 @@ export function layout() {
 
   const firstTexts = document.createElement("div");
   firstTexts.classList.add("additional");
+  firstTexts.classList.add("additional1");
 
   const secondTexts = document.createElement("div");
   secondTexts.classList.add("additional");

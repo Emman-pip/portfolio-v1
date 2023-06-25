@@ -34,6 +34,10 @@ body {
 
 /* scroll bar */
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 ::-webkit-scrollbar-track {
   width: 2vw;
   background-color: var(--light-accent);
@@ -41,10 +45,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
 }
 
 /* top bar */
@@ -238,13 +238,15 @@ body {
 /* second part */
 
 .aboutMeBackground {
-  height: 100vh;
+  height: 130vh;
   background: linear-gradient(
     to bottom,
     var(--main-color),
     var(--dark-accent) /* var(--light-accent) */
   );
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -419,6 +421,7 @@ span:hover {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 }
 
 /* //////////////////SLIDER////////////////////////////////////////// */
@@ -435,13 +438,14 @@ span:hover {
   position: relative;
 }
 .slider {
+  overflow-x: hidden;
   width: 80vw;
   height: 65vh;
   display: flex;
   scroll-behavior: smooth;
-  overflow: hidden;
 
   /* outline: 10px solid red; */
+  /* display: relative; */
   /* background-color: #000000; */
   /* transition: transform 2s; */
   /* -webkit-transition: transform 2s; */
@@ -460,6 +464,15 @@ span:hover {
   background-color: #00000051;
   cursor: pointer;
   z-index: 3;
+  position: absolute;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
 
 .projects {
@@ -527,7 +540,9 @@ span:hover {
 
 form {
   z-index: 2;
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   /* background-color: var(--white-shade); */
   background-color: rgba(255, 255, 255, 0.564);
@@ -604,6 +619,7 @@ textarea {
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .secondAdditional {
@@ -722,4 +738,158 @@ textarea {
 
 .nameContainer2 {
   position: absolute;
+  left: 0;
+}
+
+.backgroundSea {
+  overflow: hidden;
+}
+
+/* media queries */
+
+@media (width < 951px) {
+  .socmedContainer {
+    min-width: 247px;
+  }
+  .socicons {
+    width: 2.5rem;
+    min-width: 40px;
+  }
+  .CPnumber {
+    font-size: 1rem;
+  }
+
+  .aboutMeParag {
+    font-size: 1rem;
+  }
+}
+
+@media (width < 722px) {
+  .additional1 {
+    display: none;
+  }
+  .secondAdditional {
+    width: 100%;
+  }
+}
+
+@media (width < 552px) {
+  form {
+    width: 80vw;
+  }
+
+  .emailSection {
+    height: 120vh;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .emailSection100 {
+    height: 120vh;
+  }
+
+  .AMTitle {
+    font-size: 3rem;
+  }
+
+  .worksTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (width < 520px) {
+  .socmedContainer {
+    display: none;
+  }
+
+  .aboutMeParag {
+    text-align: justify;
+    width: 100%;
+  }
+
+  .worksTitle {
+    height: 20vh;
+  }
+}
+
+@media (width <= 375px) {
+  form {
+    min-width: 300.15px;
+    min-height: 667.2px;
+  }
+  fieldset {
+    border: none;
+  }
+  .backgroundSea {
+    width: 100vw;
+  }
+
+  .greet {
+    font-size: 5rem;
+  }
+}
+
+@media (height < 776px) {
+  .socmedContainer {
+    min-height: 54px;
+  }
+}
+
+@media (height > 507px) and (width >1236px) {
+  .emailSection100 {
+    height: 100%;
+  }
+  .emailSection {
+    height: 50vw;
+  }
+  .aboutMeBackground {
+    height: 50vw;
+  }
+
+  .aboutmeButton {
+    top: 80vh;
+  }
+}
+
+@media (height < 612px) {
+  .aboutMeBackground {
+    height: 50vw;
+  }
+  textarea,
+  input {
+    width: 100%;
+    height: 100%;
+  }
+
+  .emailSection {
+    height: 100vh;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  fieldset,
+  form {
+    height: 100%;
+  }
+  fieldset {
+    overflow-y: scroll;
+  }
+
+  textarea {
+    min-height: 4rem;
+  }
+}
+
+@media (height<507px) {
+  .emailSection100 {
+    height: 100%;
+  }
+  .emailSection {
+    height: 50vw;
+  }
+  .aboutMeBackground {
+    height: 50vw;
+  }
+
+  .aboutmeButton {
+    top: 80vh;
+  }
 }
