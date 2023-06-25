@@ -420,6 +420,8 @@ span:hover {
   justify-content: center;
 }
 
+/* //////////////////SLIDER////////////////////////////////////////// */
+
 .slideContainer {
   height: auto;
   width: 80vw;
@@ -462,30 +464,6 @@ span:hover {
   box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
-.buttonContainer {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttonContainer > a {
-  height: 2rem;
-  width: 2rem;
-  background-color: var(--dark-accent);
-  border-radius: 10rem;
-  text-decoration: none;
-  font-family: Raj-bold;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttonContainer > a:active {
-  background-color: var(--main-accent);
-}
-
 .projects:first-child::after {
   content: "1";
   margin-top: -10vw;
@@ -525,6 +503,7 @@ span:hover {
 #span3:target ~ .slider {
   transform: translateX(-160vw);
 }
+/* //////////////////SLIDER////////////////////////////////////////// */
 
 /* /////////////////email////////////////////// */
 .emailSection {
